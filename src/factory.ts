@@ -20,6 +20,11 @@ import getScreen from "./components/screen";
 import getSystem from "./components/system";
 import getWebGL from "./components/webgl";
 
+// Import PRO component functions (client-side only)
+import getTLS from "./components/tls";
+import getProtocol from "./components/protocol";
+import getHeaders from "./components/headers";
+
 // Import experimental component functions
 import getWebRTC from "./components/webrtc";
 import getMathML from "./components/mathml";
@@ -38,7 +43,11 @@ export const tm_component_promises = {
     'plugins': getPlugins,
     'screen': getScreen,
     'system': getSystem,
-    'webgl': getWebGL
+    'webgl': getWebGL,
+    // PRO features (client-side only, no backend required)
+    'tls': getTLS,
+    'protocol': getProtocol,
+    'headers': getHeaders,
 };
 
 /**
