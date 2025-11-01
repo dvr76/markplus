@@ -1,14 +1,13 @@
 "use client"
 
 import React, { useState, useEffect } from 'react';
-import { Thumbmark } from "@thumbmarkjs/thumbmarkjs";
+import { getThumbmark } from "markplus";
 
 function Fingerprint() {
     const [thumbmark, setThumbmark] = useState('');
   
     useEffect(() => {
-      const tm = new Thumbmark;
-      tm.get()
+      getThumbmark()
         .then((result) => {
           setThumbmark(result.thumbmark);
         })
