@@ -1,137 +1,192 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>markplus - Browser Fingerprinting Library</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&display=swap"
+      rel="stylesheet"
+    />
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-            line-height: 1.6;
-            color: #333;
-        }
-        h1 {
-            color: #2c3e50;
-            border-bottom: 2px solid #3498db;
-            padding-bottom: 10px;
-        }
-        h2 {
-            color: #34495e;
-            margin-top: 30px;
-        }
-        a {
-            color: #3498db;
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-        code {
-            background: #f4f4f4;
-            padding: 2px 6px;
-            border-radius: 3px;
-            font-family: 'Courier New', monospace;
-        }
-        .credit {
-            background: #f9f9f9;
-            border-left: 4px solid #3498db;
-            padding: 15px;
-            margin: 20px 0;
-        }
-        .note {
-            background: #fff3cd;
-            border-left: 4px solid #ffc107;
-            padding: 15px;
-            margin: 20px 0;
-        }
-        ul {
-            margin: 10px 0;
-        }
-        li {
-            margin: 5px 0;
-        }
+      body {
+        font-family: "IBM Plex Sans", sans-serif;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+        line-height: 1.6;
+        color: #333;
+      }
+      h1 {
+        color: #2c3e50;
+        border-bottom: 2px solid #3498db;
+        padding-bottom: 10px;
+      }
+      h2 {
+        color: #34495e;
+        margin-top: 30px;
+      }
+      a {
+        color: #3498db;
+        text-decoration: none;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+      code {
+        background: #f4f4f4;
+        padding: 2px 6px;
+        border-radius: 3px;
+        font-family: "Courier New", monospace;
+      }
+      .credit {
+        background: #f9f9f9;
+        border-left: 4px solid #3498db;
+        padding: 15px;
+        margin: 20px 0;
+      }
+      .note {
+        background: #fff3cd;
+        border-left: 4px solid #ffc107;
+        padding: 15px;
+        margin: 20px 0;
+      }
+      ul {
+        margin: 10px 0;
+      }
+      li {
+        margin: 5px 0;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <h1>markplus</h1>
-    
-    <p>A browser fingerprinting library for device identification and fraud detection.</p>
+    <a
+      style="
+        display: block;
+        margin-bottom: 20px;
+        font-size: 1.2rem;
+        font-weight: bold;
+      "
+      href="example.html"
+      >Open Demo Page</a
+    >
+
+    <p>
+      A browser fingerprinting library for device identification and fraud
+      detection.
+    </p>
 
     <div class="credit">
-        <strong>Fork Notice:</strong> This project is a fork of <a href="https://github.com/thumbmarkjs/thumbmarkjs" target="_blank">ThumbmarkJS</a> by Ilkka Peltola. Full credit to the original ThumbmarkJS project for the core fingerprinting technology. This is a simple side project that extends the MIT-licensed version with additional client-side detection capabilities.
+      <strong>Fork Notice:</strong> This project is a fork of
+      <a href="https://github.com/thumbmarkjs/thumbmarkjs" target="_blank"
+        >ThumbmarkJS</a
+      >
+      by Ilkka Peltola. Full credit to the original ThumbmarkJS project for the
+      core fingerprinting technology. This is a simple side project that extends
+      the MIT-licensed version with additional client-side detection
+      capabilities.
     </div>
 
     <h2>What is markplus?</h2>
-    
-    <p>markplus is a client-side JavaScript library that generates unique browser fingerprints based on browser characteristics and capabilities. It can be used for:</p>
-    
+
+    <p>
+      markplus is a client-side JavaScript library that generates unique browser
+      fingerprints based on browser characteristics and capabilities. It can be
+      used for:
+    </p>
+
     <ul>
-        <li>Device identification</li>
-        <li>Fraud detection</li>
-        <li>Bot detection</li>
-        <li>User tracking (with proper consent)</li>
-        <li>Security analysis</li>
+      <li>Device identification</li>
+      <li>Fraud detection</li>
+      <li>Bot detection</li>
+      <li>User tracking (with proper consent)</li>
+      <li>Security analysis</li>
     </ul>
 
     <h2>Features</h2>
-    
+
     <p>Built on the original ThumbmarkJS foundation, markplus includes:</p>
-    
+
     <ul>
-        <li>Canvas and WebGL fingerprinting</li>
-        <li>Audio context fingerprinting</li>
-        <li>Font detection</li>
-        <li>Screen characteristics</li>
-        <li>Browser permissions analysis</li>
-        <li>TLS/cipher suite capabilities</li>
-        <li>HTTP protocol support detection</li>
-        <li>HTTP headers and client hints</li>
+      <li>Canvas and WebGL fingerprinting</li>
+      <li>Audio context fingerprinting</li>
+      <li>Font detection</li>
+      <li>Screen characteristics</li>
+      <li>Browser permissions analysis</li>
+      <li>TLS/cipher suite capabilities</li>
+      <li>HTTP protocol support detection</li>
+      <li>HTTP headers and client hints</li>
     </ul>
 
     <h2>Key Differences from Original</h2>
-    
+
     <p>This fork adds the following client-side features:</p>
-    
+
     <ul>
-        <li><strong>TLS Detection:</strong> Fingerprints cryptographic capabilities</li>
-        <li><strong>Protocol Detection:</strong> Detects HTTP/2, HTTP/3, WebSocket, WebRTC support</li>
-        <li><strong>Enhanced Headers:</strong> Client Hints, Accept headers, security headers</li>
+      <li>
+        <strong>TLS Detection:</strong> Fingerprints cryptographic capabilities
+      </li>
+      <li>
+        <strong>Protocol Detection:</strong> Detects HTTP/2, HTTP/3, WebSocket,
+        WebRTC support
+      </li>
+      <li>
+        <strong>Enhanced Headers:</strong> Client Hints, Accept headers,
+        security headers
+      </li>
     </ul>
 
     <div class="note">
-        <strong>Note:</strong> All fingerprinting is performed client-side. This library does not connect to any external services or APIs.
+      <strong>Note:</strong> All fingerprinting is performed client-side. This
+      library does not connect to any external services or APIs.
     </div>
 
     <h2>Quick Start</h2>
-    
-    <p>See the <a href="example.html">interactive example</a> to test the library in your browser.</p>
-    
+
+    <p>
+      See the <a href="example.html">interactive example</a> to test the library
+      in your browser.
+    </p>
+
     <p>To use in your project:</p>
-    
+
     <ol>
-        <li>Build the library: <code>npm run build</code></li>
-        <li>Include the appropriate dist file in your HTML</li>
-        <li>Call the fingerprinting function</li>
+      <li>Build the library: <code>npm run build</code></li>
+      <li>Include the appropriate dist file in your HTML</li>
+      <li>Call the fingerprinting function</li>
     </ol>
 
     <h2>Documentation</h2>
-    
-    <p>For complete documentation, see the <a href="https://github.com/yourusername/markplus">GitHub repository</a>.</p>
+
+    <p>
+      For complete documentation, see the
+      <a href="https://github.com/yourusername/markplus">GitHub repository</a>.
+    </p>
 
     <h2>Credits</h2>
-    
-    <p><strong>Original Project:</strong> <a href="https://github.com/thumbmarkjs/thumbmarkjs" target="_blank">ThumbmarkJS</a></p>
+
+    <p>
+      <strong>Original Project:</strong>
+      <a href="https://github.com/thumbmarkjs/thumbmarkjs" target="_blank"
+        >ThumbmarkJS</a
+      >
+    </p>
     <p><strong>Original Author:</strong> Ilkka Peltola</p>
-    <p><strong>Website:</strong> <a href="https://www.thumbmarkjs.com" target="_blank">thumbmarkjs.com</a></p>
-    
-    <p>This is a personal side project fork that extends the MIT-licensed version.</p>
+    <p>
+      <strong>Website:</strong>
+      <a href="https://www.thumbmarkjs.com" target="_blank">thumbmarkjs.com</a>
+    </p>
+
+    <p>
+      This is a personal side project fork that extends the MIT-licensed
+      version.
+    </p>
 
     <h2>License</h2>
-    
-    <p>MIT License - Same as the original ThumbmarkJS</p>
-</body>
-</html>
 
+    <p>MIT License - Same as the original ThumbmarkJS</p>
+  </body>
+</html>
