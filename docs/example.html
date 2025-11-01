@@ -7,7 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&display=swap"
       rel="stylesheet"
     />
     <style>
@@ -17,6 +17,13 @@
         margin: 0 auto;
         padding: 20px;
         background: #f5f5f5;
+      }
+      code {
+        font-family: "IBM Plex Mono", monospace;
+      }
+
+      pre {
+        font-family: "IBM Plex Mono", monospace;
       }
       h1,
       h2 {
@@ -196,7 +203,9 @@
           console.log("Fingerprint result:", result);
 
           // Display fingerprint
-          document.getElementById("fingerprint").textContent = result.thumbmark;
+          document.getElementById("fingerprint").textContent = result.thumbmark
+            .toString()
+            .toUpperCase();
 
           // TLS capabilities
           const tls = result.components.tls || {};
